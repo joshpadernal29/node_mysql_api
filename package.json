@@ -40,5 +40,13 @@
     "nodemon": "^3.1.14",
     "ts-node": "^10.9.2",
     "typescript": "^6.0.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joshpadernal29/node_mysql_api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/joshpadernal29/node_mysql_api/issues"
+  },
+  "homepage": "https://github.com/joshpadernal29/node_mysql_api#readme"
 }
