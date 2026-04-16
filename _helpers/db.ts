@@ -1,7 +1,7 @@
 import config from '../config.json';
 import mysql from 'mysql2/promise';
 import { Sequelize } from 'sequelize';
-import accountModel from '../accounts/account.model';
+import accountModel from '../accounts/accounts.model';
 import refreshTokenModel from '../accounts/refresh-token.model';
 
 const db = any = {};
