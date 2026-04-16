@@ -4,7 +4,7 @@ import { Sequelize } from 'sequelize';
 import accountModel from '../accounts/accounts.model';
 import refreshTokenModel from '../accounts/refresh-token.model';
 
-const db = any = {};
+const db: any = {};
 export default db;
 
 initialize();
