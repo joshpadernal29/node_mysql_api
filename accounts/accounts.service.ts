@@ -78,7 +78,7 @@ async function register(params: any, origin: any) {
     const account = new db.Account(params);
 
     const isFirstAccount = (await db.Account.count()) === 0;
-    account.role - isFirstAccount ? Role.Admin : Role.User;
+    account.role = isFirstAccount ? Role.Admin : Role.User;
     account.verificationToken = randomTokenString();
 
     account.passwordHash = await hash(params.password);
@@ -102,7 +102,7 @@ async function forgotPassword({ email }: any, origin: any) {
     if (!account) return;
 
     account.resetToken = randomTokenString();
-    account.resetTokenExpires() = new Date(Date.now() + 24 * 60 * 60 * 1000);
+    account.resetTokenExpires = new Date(Date.now() + 24 * 60 * 60 * 1000);
     await account.save();
 
     await sendPasswordResetEmail(account, origin);
@@ -150,7 +150,7 @@ async function create(params: any) {
     account.passwordHash = await hash(params.password);
     await account.save();
 
-    return basicdetails(account);
+    return basicDetails(account);
 }
 
 async function update(id: any, params: any) {
