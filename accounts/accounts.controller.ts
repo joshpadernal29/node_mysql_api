@@ -155,7 +155,7 @@ function getAll(req: any, res: any, next: any) {
 }
 
 function getById(req: any, res: any, next: any) {
-    if (Number(req.params.id) !== req.user.id && req.user.role !== Role.Admin) {
+    if (Number(req.params.id) !== req.auth.id && req.auth.role !== Role.Admin) {
         return res.status(401).json({ message: 'Unauthorized' });
     }
 
