@@ -1,3 +1,7 @@
+// Load environment variables from .env
+import dotenv from 'dotenv';
+dotenv.config();
+
 import config from '../config.json';
 import mysql from 'mysql2/promise';
 import { Sequelize } from 'sequelize';
