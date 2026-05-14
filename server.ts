@@ -1,6 +1,8 @@
 // Load environment variables from .env
+import path from 'path';
 import dotenv from 'dotenv';
-dotenv.config();
+
+dotenv.config({ path: path.resolve(__dirname, '../config.env') }); // path from server.ts
 
 import express from 'express';
 import bodyParser from 'body-parser';

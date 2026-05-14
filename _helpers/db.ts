@@ -1,6 +1,7 @@
 // Load environment variables from .env
+import path from 'path';
 import dotenv from 'dotenv';
-dotenv.config();
+dotenv.config({ path: path.resolve(__dirname, '../../config.env') });
 
 import config from '../config.json';
 import mysql from 'mysql2/promise';
