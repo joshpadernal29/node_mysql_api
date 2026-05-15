@@ -3,7 +3,7 @@ import config from '../config.json';
 import db from '../_helpers/db';
 import Role from '../_helpers/role'; // Using capital Role to match your import in the controller
 
-const { secret } = config;
+const secret = process.env.JWT_SECRET;
 
 export default function authorize(roles: any = []) {
     if (typeof roles === 'string') {
