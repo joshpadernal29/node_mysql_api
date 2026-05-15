@@ -53,7 +53,7 @@ export default async function sendEmail({
     to,
     subject,
     html,
-    from = process.env.EMAIL_FROM,
+    from = process.env.SENDER_EMAIL,
 }: SendEmailParams) {
     try {
         const info = await transporter.sendMail({
